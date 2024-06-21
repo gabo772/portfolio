@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-md-6">
+        <shared-form (onNewPersonEmitter)="onNewPerson($event)"></shared-form>
+    </div>
+    <div class="col-md-6">
+        <shared-list-people [inputPersonas]="getPersonas"></shared-list-people>
+    </div>
+
+</div>

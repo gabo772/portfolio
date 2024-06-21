@@ -73,6 +73,10 @@
               "buildTarget": "portfolio:build:development"
             }
           },
+          "options": {
+            "buildTarget": "portfolio:build",
+            "proxyConfig": "src/proxy.conf.json"
+          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
@@ -101,5 +105,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "035d5bfc-613f-491c-afba-4c7fb074646b"
   }
 }

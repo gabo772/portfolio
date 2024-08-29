@@ -1,3 +1,98 @@
 img {}
 
 .card {}
+
+#pokemonType {
+    padding: 0px 6px 3px 6px;
+    border-radius: 15px;
+}
+
+.normal {
+    background-color: #4f676dc2;
+    color: white;
+}
+
+.grass,
+.planta {
+    background-color: #78C850;
+}
+
+.fire,
+.fuego {
+    background-color: #F08030;
+}
+
+.water,
+.agua {
+    background-color: #6890F0;
+}
+
+.electric,
+.eléctrico {
+    background-color: #F8D030;
+}
+
+.ice,
+.hielo {
+    background-color: #98D8D8;
+}
+
+.fighting,
+.lucha {
+    background-color: #C03028;
+}
+
+.poison,
+.veneno {
+    background-color: #A040A0;
+}
+
+.ground,
+.tierra {
+    background-color: #E0C068;
+}
+
+.flying,
+.volador {
+    background-color: #A890F0;
+}
+
+.psychic,
+.psíquico {
+    background-color: #F85888;
+}
+
+.bug,
+.bicho {
+    background-color: #A8B820;
+}
+
+.rock,
+.roca {
+    background-color: #B8A038;
+}
+
+.ghost,
+.fantasma {
+    background-color: #705898;
+}
+
+.dragon,
+.dragón {
+    background-color: #7038F8;
+}
+
+.dark,
+.siniestro {
+    background-color: #705848;
+}
+
+.steel,
+.acero {
+    background-color: #B8B8D0;
+}
+
+.fairy,
+.hada {
+    background-color: #EE99AC;
+}

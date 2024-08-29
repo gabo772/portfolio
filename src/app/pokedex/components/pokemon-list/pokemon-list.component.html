@@ -1,6 +1,13 @@
-<ul class="list-group ">
+<!--<ul class="list-group ">
     <li class="list-group-item" *ngFor="let pokemon of pokemons ">
         <app-card-pokemon [pokemon]="pokemon"></app-card-pokemon>
     </li>
 
-</ul>
+</ul>-->
+
+<div class="d-flex flex-column vh-100 overflow-y-auto">
+    <div class="d-flex" *ngFor="let pokemon of pokemons ">
+        <app-card-pokemon [pokemon]="pokemon"></app-card-pokemon>
+    </div>
+
+</div>

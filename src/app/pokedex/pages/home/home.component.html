@@ -1,4 +1,13 @@
+<ng-template #loading>
+
+    <div class="alert alert-info col-md-8">
+        espere porfavor
+    </div>
+
+
+</ng-template>
 <div class="row">
-    <app-search-form class="col-md-4" (onSearchPokemon)="searchPokemons($event)"></app-search-form>
-    <app-pokemon-list class="col-md-8" [pokemons]="pokemons"></app-pokemon-list>
+    <app-search-form class="col-md-4" (onSearchPokemon)="searchPokemons($event)" (onLoadingPokemons)="onLoading($event)"
+        (onDeletePokemons)="onDeletePokelistHome($event)"></app-search-form>
+    <app-pokemon-list class="col-md-8" [pokemons]="pokemons" *ngIf="!loader;else loading"></app-pokemon-list>
 </div>

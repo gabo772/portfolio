@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { PokedexService } from '../../services/pokedex.service';
 import { Pokemon } from '../../interfaces/pokemon.interface';
 
@@ -9,10 +9,13 @@ import { Pokemon } from '../../interfaces/pokemon.interface';
 })
 export class PokemonListComponent {
 
+
   @Input()
   public pokemons: Pokemon[] = [];
 
   constructor() { }
+
+
 
 
 

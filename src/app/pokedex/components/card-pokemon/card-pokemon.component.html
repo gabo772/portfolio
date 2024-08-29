@@ -1,26 +1,26 @@
-<div class="card">
+<div class="card p-2">
     <div class="row">
         <div class="col-md-4">
-            <img [src]="this.pokemon.frontNormal" alt="bulba" class="card-img-top w-100">
+            <img [src]="this.pokemon.frontNormal" alt="bulba" class="card-img-top">
         </div>
         <div class="col-md-8">
             <div class="card-body">
                 <div class="row mb-2">
-                    <div class="col-md-4">
-                        <h2>Nombre:</h2>
+                    <div class="col-md-6">
+                        <h5>Nombre:</h5>
                     </div>
-                    <div class="col-md-8">
-                        <h2>{{this.pokemon.name}}</h2>
+                    <div class="col-md-6">
+                        <h5>{{this.pokemon.name}}</h5>
                     </div>
                 </div>
                 <div class="row mt-2">
                     <div class="col-md-4">
-                        <h2>Tipo:</h2>
+                        <h5>Tipo:</h5>
                     </div>
                     <div class="col-md-8">
                         <div class="d-flex justify-content-start">
-                            <div class="pe-2" *ngFor="let tipo of this.pokemon.types">
-                                <h2>{{tipo}}</h2>
+                            <div class="pe-1" *ngFor="let tipo of this.pokemon.types">
+                                <h5 [class]="tipo" id="pokemonType">{{tipo}}</h5>
                             </div>
 
                         </div>

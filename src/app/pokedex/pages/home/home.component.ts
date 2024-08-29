@@ -9,8 +9,13 @@ import { Pokemon } from '../../interfaces/pokemon.interface';
 })
 export class HomeComponent implements OnInit {
 
-  get pokemons(): Pokemon[] {
-    return this.pokedexService.getPokemons;
+  public loader: boolean = false;
+
+  public pokemons: Pokemon[] = [];
+
+
+  get getLoader(): boolean {
+    return this.pokedexService.getLoader
   }
 
   constructor(private pokedexService: PokedexService) {
@@ -20,11 +25,30 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     //this.pokedexService.getPokemonApi()
+    console.log(this.loader);
+
   }
 
   searchPokemons(pokemonName: string) {
     console.log(`Se busca pokemon ${pokemonName}`);
-    this.pokedexService.getPokemonApi(pokemonName);
+    /**
+     * ? esta linea comentada consulta mediante api
+     */
+    this.pokedexService.getPokemonApi(pokemonName).subscribe((resp) => {
+      this.pokemons = resp;
+      this.loader = false
+    })
+    //this.pokedexService.getPokemonMock(pokemonName)
+  }
+
+  onLoading(loading: boolean) {
+    this.loader = loading
+    console.log("Loading desde home " + this.loader);
+
+  }
+
+  onDeletePokelistHome(pokemons: Pokemon[]) {
+    this.pokemons = pokemons;
   }
 
 }
